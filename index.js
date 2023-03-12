@@ -19,8 +19,13 @@ app.get("/users", (req, res) => {
             console.error(err);
             return;
         }
+        
+        const data = JSON.parse(data)
 
-        return res.json(JSON.parse(data))
+        return res.json({
+            total : data.users.length,
+            users : data.users
+        })
 
     })
 })
