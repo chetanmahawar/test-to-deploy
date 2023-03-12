@@ -49,6 +49,11 @@ app.post("/users", (req, res) => {
                 return;
             }
         });
+        
+        return res.json({
+           updated : true,
+           data : payload
+        })
     });
 })
 
