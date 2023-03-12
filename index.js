@@ -20,11 +20,11 @@ app.get("/users", (req, res) => {
             return;
         }
         
-        const data = JSON.parse(data)
+        const metaData = JSON.parse(data)
 
         return res.json({
-            total : data.users.length,
-            users : data.users
+            total : metaData.users.length,
+            users : metaData.users
         })
 
     })
